@@ -1,11 +1,10 @@
 #include <stdio.h>
-#include <math.h> // Required for the pow() function
 
 int main() {
     int popularity, size;
-    long long homeValue;
+    long long homeValue; //long long is used for large values
 
-    // Geting user input
+    // Getting user input
     printf("Enter popularity: ");
     scanf("%d", &popularity);
 
@@ -13,7 +12,7 @@ int main() {
     scanf("%d", &size);
 
     // Calculating the home value
-    homeValue = (pow(popularity, 3) + pow(size, 2)) * 10000;
+    homeValue = (popularity * popularity * popularity + size * size) * 10000;
 
     // result
     printf("Home value is: %lld TL\n", homeValue);
